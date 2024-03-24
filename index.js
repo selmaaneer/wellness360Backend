@@ -15,7 +15,7 @@ const dbURL = process.env.DB_URL;
 
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:3001', 
+  origin: 'https://wellness360-backend-fn5j.vercel.app', 
   credentials: true 
 }));
 app.use(cookieParser());
