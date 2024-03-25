@@ -21,11 +21,6 @@ app.use(cors({
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false}));
 
-app.get("/", (req, res) => {
-  res.json("hello");
-})
-
-
 
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected successfully"))
