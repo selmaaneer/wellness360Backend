@@ -17,10 +17,9 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: true,
-  credentials: true,
+  origin: 'https://wellness360frondend.vercel.app', 
+  credentials: true 
 }));
-
 
 
 app.use(cookieParser());
