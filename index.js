@@ -19,11 +19,16 @@ app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Enable CORS for all routes
-app.use(cors());
+app.use(cors({
+  origin: ['https://wellness360-frondendside.vercel.app']
+}));
+
 
 mongoose.connect(dbURL, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected successfully"))
   .catch((err) => console.error("Error connecting to MongoDB:", err));
+app.options('*', cors());
+
 
 app.use("/auth", authRoute);
 app.use("/profile", profileRoute);
