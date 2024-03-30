@@ -17,7 +17,7 @@ app.use(express.json());
 
 
 app.use(cors({
-  origin: 'https://wellness360frondend.vercel.app', // Remove the trailing slash
+  origin: 'https://wellness360frondend.vercel.app',
   credentials: true 
 }));
 
