@@ -16,9 +16,14 @@ const dbURL = process.env.DB_URL;
 app.use(express.json());
 
 // Enable CORS for all routes
-app.use(cors({
-  origin: ['https://wellness360-frondendside.vercel.app']
-}));
+const corsConfig = {
+  origin: "*", 
+  credentials: true ,
+  methods: ["GET", "POST", "PUT", "DELETE"]
+
+};
+
+app.use(cors(corsConfig));
 
 
 app.use(cookieParser());
