@@ -1,7 +1,8 @@
 const { Signup, Login } = require('../Controllers/AuthController')
 const router = require('express').Router()
 const { userVerification } = require('../Middlewares/AuthMiddleware');
-const User= require('../models/UserModel')
+const User= require('../models/UserModel');
+const bcrypt = require('bcryptjs');
 
 
 router.post('/signup', async (req, res) => {
